@@ -1,0 +1,53 @@
+{
+  "title": "Qingping Screen",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to a Qingping screen",
+        "description": "Make sure wireless ADB is enabled. The first connection may show an authorization prompt on the device.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "device_name": "Device name",
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect. Check the address, ADB status, network, and authorization prompt.",
+      "unsupported_state": "Connected, but the backlight state is not supported. Expected 0 or 4.",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Qingping Screen options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "select": {
+      "display_page": {
+        "name": "Display page",
+        "state": {
+          "summary": "Summary",
+          "settings": "Settings",
+          "app": "App",
+          "air_data": "Air data"
+        }
+      }
+    },
+    "switch": {
+      "screen": {
+        "name": "Screen"
+      }
+    }
+  }
+}

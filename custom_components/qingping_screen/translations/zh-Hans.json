@@ -1,0 +1,53 @@
+{
+  "title": "青萍屏幕",
+  "config": {
+    "step": {
+      "user": {
+        "title": "连接青萍屏幕",
+        "description": "请确认设备已启用无线 ADB。首次连接时，设备上可能会显示授权提示。",
+        "data": {
+          "host": "主机地址",
+          "port": "端口",
+          "device_name": "设备名称",
+          "scan_interval": "轮询间隔（秒）"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接。请检查地址、ADB 状态、网络以及设备上的授权提示。",
+      "unsupported_state": "已连接，但设备返回了不支持的背光状态；预期值为 0 或 4。",
+      "unknown": "发生未知错误"
+    },
+    "abort": {
+      "already_configured": "该设备已配置"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "青萍屏幕选项",
+        "data": {
+          "scan_interval": "轮询间隔（秒）"
+        }
+      }
+    }
+  },
+  "entity": {
+    "select": {
+      "display_page": {
+        "name": "展示页面",
+        "state": {
+          "summary": "汇总页",
+          "settings": "设置页",
+          "app": "App 页",
+          "air_data": "空气数据页"
+        }
+      }
+    },
+    "switch": {
+      "screen": {
+        "name": "屏幕"
+      }
+    }
+  }
+}
